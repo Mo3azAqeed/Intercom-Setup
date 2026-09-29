@@ -7,6 +7,8 @@ What the Intercom article editor supports, and the rules for writing article HTM
 - **No whitespace between block tags.** Newlines or indentation between `</p>` and `<h2>` become empty paragraphs. Write the body as one continuous string: `<p>…</p><h2>…</h2><ul><li>…</li></ul>`.
 - **Deliberate blank line:** `<p>&nbsp;</p>`.
 - **Title is not an H1.** Intercom renders the article title in a `<header>`. Start the body with an opening paragraph, and use `<h2>` for sections and `<h3>` for subsections. An H1 repeating the title is allowed for accessibility but isn't needed.
+- **Intercom normalizes headings.** Observed on 2026-09-30: an `<h2>` sent through `update_article` / `create_article` is stored as `<h1>` (the editor's large heading), with an id added. The structure is kept, so this isn't an error. Don't "fix" it, and don't flag stored `<h1>` section headings as a problem in reviews.
+- **Intercom adds its own markup.** Stored bodies wrap text in `<p class="no-margin">`, turn `<strong>` into `<b>`, and wrap tables in a styled container. Compare stored bodies by text and structure, not by exact HTML.
 - **No JavaScript.** Buttons render as styled links; `onclick` and scripts don't run.
 
 ## Supported Elements
