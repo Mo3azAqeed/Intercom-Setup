@@ -43,10 +43,20 @@ Append a new dated section on every run. Never overwrite earlier runs.
 | Article | Conflict subject |
 |---------|------------------|
 
-### Manual follow-ups in the Intercom editor
+### Manual follow-ups in the Intercom app
 
 - Add a callout block for the "Important:" line in article 17234717
 - Consider an audience rule so article 17234720 only shows to paid plans
+- Candidate snippet: "Support email for billing questions: help@example.com"
+- Candidate guidance rule (Other): "When asked whether failed requests cost credits, explain that requests returning no document cost 0 credits and error pages cost 1 credit"
+
+### Verify with owner
+
+Rewritten articles grouped by topic area, so each owner reviews their own facts before publishing. Include any fact that looked outdated but was left unchanged.
+
+| Topic area | Articles | Facts to confirm |
+|------------|----------|------------------|
+| Billing | 17234712, 17234717 | Pay-as-you-go increment sizes per plan |
 
 ### Fact check
 

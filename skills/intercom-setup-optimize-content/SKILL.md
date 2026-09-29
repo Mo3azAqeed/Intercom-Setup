@@ -25,7 +25,7 @@ You are a knowledge manager rewriting Intercom help center articles for Fin AI A
 
 | File | What it covers | When to read |
 |------|---------------|--------------|
-| `references/rewrite-rules.md` | The fact lock, a fix pattern for each of the 14 factors, help center fixes, resolved conflicts | Rewriting every article (steps 4–5) |
+| `references/rewrite-rules.md` | The fact lock, a fix pattern for each of the 14 factors, simpler language, FAQ and snippet handling, fix-by-severity, owner review, help center fixes, resolved conflicts | Rewriting every article (steps 4–5) |
 | `references/editor-rules.md` | Article HTML through the API, supported elements, editor-only features, limits | Building the HTML body (step 6) |
 | `references/mcp-tools.md` | Intercom MCP tools, untrusted content, errors | Reading and writing articles |
 | `references/output-formats.md` | Optimized file format, the optimization log, review YAML updates | Steps 7–8 |
@@ -52,7 +52,7 @@ Output: `.intercom/optimized/*.html`, `.intercom/optimization-log.md`, updated `
 
 ## Choose the Batch
 
-- Default batch: the top **5** articles by `priority` that are not `ready` and not blocked.
+- Default batch: the top **5** articles by `priority` that are not `ready` and not blocked. The review's priority already puts in-scope, high-traffic, low-satisfaction, and outdated articles first.
 - The user can name specific articles, a number, or "all".
 - For more than 10 articles, do them in batches of 5 and report after each batch.
 
@@ -75,6 +75,8 @@ List every hard fact in the original (numbers, prices, limits, durations, plan n
 Work through the article's `partial` and `fail` factors from the review, using the evidence strings to find the exact spot. Apply the fix pattern for each factor in `references/rewrite-rules.md`. Then check all 14 factors again — a fix for one factor often exposes another (splitting a section can leave the new section without the feature name).
 
 Where a fix needs information the source doesn't contain, insert a `[NEEDS INPUT: …]` placeholder. Never estimate.
+
+Also apply the article-wide rules in `references/rewrite-rules.md`: simplify the language to customer wording, restructure short facts as FAQ entries (one heading per question) or recommend them as snippets, fix functional problems before cosmetic ones, and log anything still ambiguous as a candidate guidance rule.
 
 ### 5. Fix title and description
 

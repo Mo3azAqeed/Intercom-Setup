@@ -72,7 +72,15 @@ coverage_gaps:            # omit if no conversations were sampled
       matching_article: null
 ```
 
-**Priority rule:** sort by (in_scope first) → readiness (`not_ready` before `needs_work`) → number of `fail` factors → number of `partial` factors → conversation volume if known. Priority `1` is optimized first.
+**Priority rule:** sort by, in order:
+1. `in_scope` first
+2. Readiness: `not_ready` before `needs_work`
+3. Traffic: conversations started from the article, then views (from the article's `statistics`, when present), then conversation volume from the coverage check
+4. Low satisfaction: higher `sad_reaction_percentage` first
+5. Staleness: oldest `updated_at` first (outdated articles are the most likely to be wrong)
+6. Number of `fail` factors, then `partial` factors
+
+Priority `1` is optimized first. Record the traffic numbers used in each article's entry (`views`, `conversations`, `sad_reaction_percentage`) so the report shows why an article ranks where it does.
 
 **Readiness rule:**
 - `ready` — every factor `pass` or `n/a`, and no `high` help-center finding

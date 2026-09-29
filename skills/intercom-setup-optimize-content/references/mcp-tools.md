@@ -24,6 +24,7 @@ The Intercom MCP server is configured in the plugin's `.mcp.json` (`https://mcp.
 | `description` | Presence and 140-character check |
 | `state` | Fin only uses published content by default |
 | `updated_at` | Unix seconds — staleness check |
+| `statistics` (when present) | `views`, `conversations` (started from the article), `reactions`, `happy/neutral/sad_reaction_percentage` — traffic and satisfaction for prioritizing. Returned on article responses; if a response omits it, prioritize without traffic and say so |
 | `parent_id` / `parent_type` | Collection structure, orphan check |
 | `default_locale` / available locales | Note translated articles; review the default locale unless the user asks otherwise |
 | `url` | Link in the report (null for drafts) |

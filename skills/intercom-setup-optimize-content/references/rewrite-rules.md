@@ -30,6 +30,8 @@ Replace every dangling pronoun with its noun. Read each sentence alone; if the s
 - Before: "It resets each month."
 - After: "Your plan's credit allowance resets each month."
 
+If a point stays ambiguous after rewriting — because the underlying policy itself is unclear or has exceptions the source doesn't spell out — don't guess. Log it under "Manual follow-ups" as a candidate **Fin guidance rule** (for example in the Other category) that states the intended behavior explicitly. Guidance rules are set in the Intercom app, not through the MCP.
+
 ## 3. Self-contained sections
 
 Each section opens by naming its subject. Remove openers that depend on the previous section ("Next,", "Also,", "In that case,"). If a section only makes sense after another one, either merge them or restate the needed context in one sentence.
@@ -91,6 +93,37 @@ Put one sentence before every table, callout, and code block saying what it show
 ## 14. Visual content and alt text
 
 Add descriptive alt text to every image. If an image shows a process, write the steps as a numbered list next to it. You cannot upload images through the MCP — keep existing `<img>` tags and their `src` exactly as they are.
+
+---
+
+## Simplify the Language
+
+Across every factor, write the way customers ask. If the review's coverage data shows how customers phrase a question, use their words in the heading and the first sentence. Replace internal names for features with the name customers see in the product. Answer in full sentences — never a bare "Yes" or "No".
+
+## FAQ Articles and Small Facts
+
+Short facts with no obvious home (a trial length, a support email, one policy line) still resolve easy questions. Fix them in one of two ways:
+
+1. **FAQ article:** group related short facts into one FAQ article. Give **each question its own `<h2>` or `<h3>`**, phrased as the customer asks it, and make each answer restate the question so it stands alone when retrieved.
+2. **Snippet:** if a fact belongs nowhere, recommend it as a Fin snippet in the log. Snippets can't be created through the MCP, so the user adds them in the app.
+
+```html
+<h2>Is there a free plan?</h2><p>Yes, the Free plan includes 1,000 credits every month and does not need a credit card.</p><h2>Where do I find my API key?</h2><p>Your API key is on the dashboard's main screen and under <strong>API Keys</strong>.</p>
+```
+
+## Fix by Severity, Not by Order
+
+Not every inaccuracy matters equally. When an article has both kinds of problems, fix and flag in this order:
+
+1. **Functional changes** — wrong limits, prices, steps that no longer work, features that behave differently. These produce wrong Fin answers.
+2. **Usability changes** — renamed menus, moved buttons, changed flows.
+3. **Cosmetic changes** — wording, styling, minor UI polish.
+
+You can only fix what the source supports. If you suspect a functional fact is outdated (the article is old, or it conflicts with a newer source), don't change it — flag it under "Verify with owner" in the log.
+
+## Accuracy Belongs to the Owner
+
+Knowledge comes from different teams (billing, engineering, legal, security). Optimization fixes structure; the subject-matter owner confirms facts. For every run, group the rewritten articles by topic area in the log so each owner can review their own area before the drafts are published.
 
 ---
 
