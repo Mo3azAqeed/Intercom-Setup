@@ -1,0 +1,21 @@
+{
+  "name": "intercom-setup",
+  "version": "0.1.0",
+  "description": "AI agent skills that make an Intercom workspace ready for Fin AI Agent — review help center content against Fin's readiness framework, then optimize it so Fin can retrieve accurate answers.",
+  "author": {
+    "name": "Moaz El Aqeed"
+  },
+  "homepage": "https://github.com/Mo3azAqeed/Intercom-Setup",
+  "repository": "https://github.com/Mo3azAqeed/Intercom-Setup",
+  "license": "MIT",
+  "keywords": [
+    "intercom",
+    "fin",
+    "fin-ai-agent",
+    "help-center",
+    "knowledge-base",
+    "content-optimization",
+    "customer-support",
+    "support-automation"
+  ]
+}

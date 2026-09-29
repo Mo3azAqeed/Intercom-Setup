@@ -1,0 +1,40 @@
+{
+  "name": "intercom-setup",
+  "owner": {
+    "name": "Moaz El Aqeed"
+  },
+  "metadata": {
+    "description": "AI agent skills that get an Intercom workspace ready for Fin AI Agent, working directly through the Intercom MCP.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "intercom-setup",
+      "source": "./",
+      "description": "Fin deployment lifecycle for Intercom — review help center content, then optimize it for Fin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Moaz El Aqeed"
+      },
+      "homepage": "https://github.com/Mo3azAqeed/Intercom-Setup",
+      "repository": "https://github.com/Mo3azAqeed/Intercom-Setup",
+      "license": "MIT",
+      "keywords": [
+        "intercom",
+        "fin",
+        "help-center",
+        "knowledge-base",
+        "content-optimization",
+        "customer-support"
+      ],
+      "category": "customer-support",
+      "tags": [
+        "intercom",
+        "fin-ai-agent",
+        "help-center",
+        "content-audit",
+        "content-optimization"
+      ]
+    }
+  ]
+}
